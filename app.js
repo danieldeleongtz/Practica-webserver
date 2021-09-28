@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'hbs');
+
 app.use('', express.static('public'));
  
 // app.get('/',  (req, res) => {
@@ -9,6 +11,10 @@ app.use('', express.static('public'));
 
 app.get('/hola-mundo',  (req, res) => {
     res.send('Hello World en su ruta')
+});
+
+app.get('/',  (req, res) => {
+  res.render('home');
 });
 
 app.get('/generic',  (req, res) => {
