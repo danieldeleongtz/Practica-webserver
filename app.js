@@ -18,26 +18,26 @@ app.get('/hola-mundo',  (req, res) => {
     res.send('Hello World en su ruta')
 });
 
-app.get('/',  (req, res) => {
-  res.render('home', {
-    nombre: 'Daniel De Leon',
-    titulo: 'Practica Node Express'
-  });
-});
+// app.get('/',  (req, res) => {
+//   res.render('home', {
+//     nombre: 'Daniel De Leon',
+//     titulo: 'Practica Node Express'
+//   });
+// });
 
-app.get('/generic',  (req, res) => {
-  res.render('generic', {
-    nombre: 'Daniel De Leon',
-    titulo: 'Practica Node Express'
-  });
-});
+// app.get('/generic',  (req, res) => {
+//   res.render('generic', {
+//     nombre: 'Daniel De Leon',
+//     titulo: 'Practica Node Express'
+//   });
+// });
 
-app.get('/elements',  (req, res) => {
-  res.render('elements', {
-    nombre: 'Daniel De Leon',
-    titulo: 'Practica Node Express'
-  });
-});
+// app.get('/elements',  (req, res) => {
+//   res.render('elements', {
+//     nombre: 'Daniel De Leon',
+//     titulo: 'Practica Node Express'
+//   });
+// });
 
 // app.get('/generic',  (req, res) => {
 //   res.sendFile(__dirname + '/public/generic.html');
@@ -48,6 +48,6 @@ app.get('/elements',  (req, res) => {
 // });
  
 app.get('*',  (req, res) => {
-   res.sendFile(__dirname + '/public/404.html')
+   res.sendFile(__dirname + '/public/index.html')
 });
 app.listen(port);
